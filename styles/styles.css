@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat Alternates", sans-serif;
+    background: radial-gradient(circle, rgba(174,238,210,1) 0%, rgba(148,187,233,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    height: 100vh;
+    color: rgb(101, 186, 255);
+}
+
+.container{
+    background: rgba(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px; 
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+h2{
+    font-family: "Boldonse", sans-serif;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgb(161, 213, 247);
+    margin-bottom: 30px;
+}
+
+.control-group{
+    margin-bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label{
+    font-weight: bold;
+    margin-bottom: 5px;
+    width: 40%;
+}
+
+input, select, textarea{
+    width: 55%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(204, 204, 204);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: text;
+    box-shadow: none;
+    font-family: "Montserrat Alternates", sans-serif;
+}
+
+input:hover, select:hover, textarea:hover{
+    border-color: rgb(0, 123, 255);
+    background-color: rgba(0, 123, 255, 0.1);
+    box-shadow: 0px 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+
+button{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-family: "Montserrat Alternates", sans-serif;
+    background: rgb(131, 170, 222);
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    background: rgba(0, 110, 255, 0.8);
+    box-shadow: 0px 4px 10px rgba(0, 110, 255, 0.5);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 80%;
+    }
+
+    .control-group{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    label{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    input, select, textarea{
+        width: 100%;
+    }
+}
